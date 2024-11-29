@@ -10,5 +10,10 @@ namespace ToDo.Controllers
         {
             return "hello world";
         }
+        [HttpGet("/teste")]
+        public string Teste()
+        {
+            return "teste";
+        }
     }
 }
