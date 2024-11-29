@@ -7,5 +7,6 @@ namespace ToDo.Repositorio
     {
         Task AdicionarTarefa(ToDoEntity entidade);
         Task<IEnumerable<ToDoDto>> TodasTarefas();
+        Task<bool> ConcluirTarefa(int id);
     }
 }

@@ -37,5 +37,15 @@ namespace ToDo.Controllers
             var tarefas = await _repositorio.TodasTarefas();
             return Ok(tarefas);
         }
+        [HttpPatch("/concluir-tarefa/{id}")]
+        public async Task<ActionResult> FinalizarTask(int id)
+        {
+            var entidade = await _repositorio.ConcluirTarefa(id);
+            if (entidade is false)
+            {
+                return NotFound();
+            }
+            return Ok("Tarefa concluida");
+        }
     }
 }

@@ -37,5 +37,17 @@ namespace ToDo.Repositorio
             Random rnd = new Random();
             return rnd.Next(100, 999);
         }
+
+        public async Task<bool> ConcluirTarefa(int id)
+        {
+            var tarefa = await _context.Todo.Where(x => x.Id == id).FirstOrDefaultAsync();
+            if(tarefa == null)
+            {
+                return false;
+            }
+            tarefa.Feito = true;
+            _context.Update(tarefa);
+            return true;
+        }
     }
 }
