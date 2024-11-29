@@ -16,8 +16,9 @@ namespace ToDo.Repositorio
 
         public async Task AdicionarTarefa(ToDoEntity entidade)
         {
-            var teste = new ToDoEntity(id: GeradorId(), nome: entidade.Nome, tarefa: entidade.Tarefa, feito: entidade.Feito);
-            await _context.AddAsync(entidade);
+            var teste = new ToDoEntity(nome: entidade.Nome, tarefa: entidade.Tarefa, feito: entidade.Feito);
+            teste.Id = GeradorId();
+            await _context.AddAsync(teste);
             _context.SaveChanges();
         }
 
