@@ -3,6 +3,6 @@ builder = "dockerfile"
 dockerfilePath = "./ToDo/Dockerfile"
 
 [deploy]
-startCommand = "../ToDo"
+startCommand = "./ToDo.dll"
 restartPolicyType = "always"
 healthcheckPath ="/health"
