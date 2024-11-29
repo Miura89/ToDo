@@ -17,7 +17,6 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-app.UseHealthChecks("/health");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
