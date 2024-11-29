@@ -1,0 +1,8 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "./ToDo/DockerFile"
+
+[deploy]
+startCommand = "./ToDo"
+restartPolicyType = "always"
+healthcheckPath ="/health"
