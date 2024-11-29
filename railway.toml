@@ -5,4 +5,4 @@ dockerfilePath = "./ToDo/Dockerfile"
 [deploy]
 startCommand = "./ToDo"
 restartPolicyType = "always"
-healthcheckPath ="/health"
+healthcheckPath = "/health"
