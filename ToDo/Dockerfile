@@ -12,7 +12,7 @@ ARG BUILD_CONFIGURATION=Release
 RUN dotnet publish "./ToDo.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=true
 
 
-FROM mcr.microsoft.com/dotnet/runtime-deps:8.0 AS final
+FROM base AS final
 WORKDIR /app
 EXPOSE 8080
 COPY --from=publish /app/publish .
