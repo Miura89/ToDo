@@ -47,6 +47,7 @@ namespace ToDo.Repositorio
             }
             tarefa.Feito = true;
             _context.Update(tarefa);
+            await _context.SaveChangesAsync();
             return true;
         }
     }
