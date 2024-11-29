@@ -2,9 +2,8 @@
 {
     public class ToDoEntity
     {
-        public ToDoEntity(int id, string nome, string tarefa, bool feito)
+        public ToDoEntity(string nome, string tarefa, bool feito)
         {
-            Id = id;
             Nome = nome;
             Tarefa = tarefa;
             Feito = feito;
