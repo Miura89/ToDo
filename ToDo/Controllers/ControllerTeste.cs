@@ -31,7 +31,7 @@ namespace ToDo.Controllers
             return Ok(entidade);
         }
 
-        [HttpGet("pegar-todos")]
+        [HttpGet("/pegar-todos")]
         public async Task<ActionResult<IEnumerable<ToDoEntity>>> BuscarTodos()
         {
             var tarefas = await _repositorio.TodasTarefas();
